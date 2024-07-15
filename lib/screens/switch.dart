@@ -4,7 +4,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
-import 'package:solar_tracker/screens/time_picker.dart';
 
 class MySwitchPage extends StatefulWidget {
   const MySwitchPage({Key? key}) : super(key: key);
@@ -162,7 +161,6 @@ void deepSleep(bool value){
       activeTrackColor: const Color.fromARGB(255, 136, 107, 195),
       onChanged: (bool value){
         setState(() {
-          Navigator.push(context,MaterialPageRoute(builder: (context) => const TimerPickerExample()),);
           deep_sleep=value;
           deepSleep(value);
         });
